@@ -67,28 +67,26 @@
     /* PORTADA */
 
     .hero {
-  min-height: 730px;
-  display: flex;
-  align-items: center;
-  padding: 70px 7%;
-  background-image: url('Elegancia dorada sobre verde británico.png');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  position: relative;
-}
+      min-height: 820px;
+      display: flex;
+      align-items: center;
+      padding: 70px 7%;
+      background-image: url('Elegancia dorada sobre verde británico.png');
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      position: relative;
+    }
 
     .hero-content {
       max-width: 780px;
     }
 
-    .logo-placeholder {
-      color: var(--gold);
-      font-family: Georgia, serif;
-      font-size: 34px;
-      letter-spacing: 5px;
-      font-weight: bold;
-      margin-bottom: 85px;
+    .hero-logo {
+      width: 210px;
+      height: auto;
+      display: block;
+      margin-bottom: 65px;
     }
 
     .eyebrow {
@@ -221,9 +219,9 @@
         padding: 55px 7%;
       }
 
-      .logo-placeholder {
-        margin-bottom: 70px;
-        font-size: 26px;
+      .hero-logo {
+        width: 155px;
+        margin-bottom: 55px;
       }
 
       .hero-description {
@@ -258,9 +256,11 @@
     <section class="hero" id="inicio">
       <div class="hero-content">
 
-        <div class="logo-placeholder">
-          MERCADO<br>CLÁSICO
-        </div>
+        <img
+          src="mercado_clasico_logo_transparente(1).png"
+          alt="Mercado Clásico"
+          class="hero-logo"
+        >
 
         <div class="eyebrow">
           — ESPECIALISTAS EN AUTOS CLÁSICOS
@@ -339,3 +339,5 @@
 
 </body>
 </html>
+
+

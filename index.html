@@ -1,0 +1,342 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mercado Clásico. Tu socio en Europa para la búsqueda, inspección y exportación de autos clásicos.">
+  <title>Mercado Clásico | Autos clásicos</title>
+
+  <style>
+    :root {
+      --green: #073d30;
+      --green-dark: #052e25;
+      --gold: #d2aa4b;
+      --cream: #f8f6ee;
+      --white: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: var(--white);
+      background: var(--green-dark);
+    }
+
+    /* MENU */
+
+    header {
+      height: 96px;
+      background: var(--cream);
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 0 7%;
+      position: relative;
+      z-index: 10;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+    }
+
+    nav a {
+      color: #202b26;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .nav-button {
+      background: var(--gold);
+      padding: 19px 30px;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    /* PORTADA */
+
+    .hero {
+      min-height: 730px;
+      display: flex;
+      align-items: center;
+      padding: 70px 7%;
+      background:
+        linear-gradient(90deg,
+          rgba(4, 53, 40, .97) 0%,
+          rgba(4, 53, 40, .83) 45%,
+          rgba(4, 53, 40, .35) 100%);
+      position: relative;
+    }
+
+    .hero-content {
+      max-width: 780px;
+    }
+
+    .logo-placeholder {
+      color: var(--gold);
+      font-family: Georgia, serif;
+      font-size: 34px;
+      letter-spacing: 5px;
+      font-weight: bold;
+      margin-bottom: 85px;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 3px;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-family: Georgia, serif;
+      font-size: clamp(46px, 6vw, 76px);
+      line-height: 1.08;
+      margin-bottom: 28px;
+    }
+
+    .hero-description {
+      font-size: 20px;
+      line-height: 1.7;
+      max-width: 750px;
+      margin-bottom: 35px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 19px 30px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .button-gold {
+      background: var(--gold);
+      color: var(--green-dark);
+    }
+
+    .button-outline {
+      border: 1px solid rgba(255,255,255,.65);
+      color: white;
+    }
+
+    /* ESTADISTICAS */
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      background: #173f34;
+      padding: 45px 7%;
+      gap: 30px;
+      border-top: 1px solid rgba(255,255,255,.2);
+    }
+
+    .stat-number {
+      color: var(--gold);
+      font-family: Georgia, serif;
+      font-size: 30px;
+      margin-bottom: 8px;
+    }
+
+    .stat-label {
+      color: #d4d8d2;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    /* SECCIONES */
+
+    .section {
+      padding: 90px 7%;
+      text-align: center;
+      background: var(--cream);
+      color: var(--green-dark);
+    }
+
+    .section h2 {
+      font-family: Georgia, serif;
+      font-size: 42px;
+      margin-bottom: 20px;
+    }
+
+    .section p {
+      max-width: 700px;
+      margin: auto;
+      font-size: 17px;
+      line-height: 1.8;
+    }
+
+    footer {
+      padding: 35px;
+      text-align: center;
+      background: var(--green-dark);
+      color: #d4d8d2;
+      font-size: 14px;
+    }
+
+    /* MOVILES */
+
+    @media (max-width: 700px) {
+      header {
+        height: 75px;
+        padding: 0 5%;
+      }
+
+      nav {
+        gap: 14px;
+      }
+
+      nav a {
+        font-size: 13px;
+      }
+
+      nav a:nth-child(2),
+      nav a:nth-child(3) {
+        display: none;
+      }
+
+      .nav-button {
+        padding: 13px 16px;
+      }
+
+      .hero {
+        min-height: 650px;
+        padding: 55px 7%;
+      }
+
+      .logo-placeholder {
+        margin-bottom: 70px;
+        font-size: 26px;
+      }
+
+      .hero-description {
+        font-size: 17px;
+      }
+
+      .stats {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 35px 7%;
+        gap: 30px 20px;
+      }
+
+      .section h2 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#contacto" class="nav-button">Buscar mi clásico</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-content">
+
+        <div class="logo-placeholder">
+          MERCADO<br>CLÁSICO
+        </div>
+
+        <div class="eyebrow">
+          — ESPECIALISTAS EN AUTOS CLÁSICOS
+        </div>
+
+        <h1>Bienvenido a<br>Mercado Clásico</h1>
+
+        <p class="hero-description">
+          Tu socio en Europa para la búsqueda, inspección y
+          exportación de autos clásicos.
+        </p>
+
+        <div class="buttons">
+          <a href="#contacto" class="button button-gold">
+            Buscar mi clásico
+          </a>
+
+          <a href="#servicios" class="button button-outline">
+            Conocé nuestros servicios
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="stats">
+      <div>
+        <div class="stat-number">15+</div>
+        <div class="stat-label">Años con autos clásicos</div>
+      </div>
+
+      <div>
+        <div class="stat-number">200+</div>
+        <div class="stat-label">Autos encontrados y entregados</div>
+      </div>
+
+      <div>
+        <div class="stat-number">15+</div>
+        <div class="stat-label">Países a los que exportamos</div>
+      </div>
+
+      <div>
+        <div class="stat-number">100%</div>
+        <div class="stat-label">Verificados antes de comprar</div>
+      </div>
+    </section>
+
+    <section class="section" id="nosotros">
+      <h2>Quiénes somos</h2>
+      <p>
+        Somos especialistas en autos clásicos europeos.
+        Acompañamos a nuestros clientes en la búsqueda,
+        selección e inspección de cada vehículo.
+      </p>
+    </section>
+
+    <section class="section" id="servicios">
+      <h2>Nuestros servicios</h2>
+      <p>
+        Búsqueda personalizada, inspección de vehículos,
+        asesoramiento y gestión de exportación internacional.
+      </p>
+    </section>
+
+    <section class="section" id="contacto">
+      <h2>Buscá tu próximo clásico</h2>
+      <p>
+        Contactanos y contanos qué automóvil estás buscando.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Mercado Clásico · Todos los derechos reservados.
+  </footer>
+
+</body>
+</html>
